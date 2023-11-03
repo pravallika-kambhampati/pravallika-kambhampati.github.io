@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://twin-cities.umn.edu'>University of Minnesota</a> Minneapolis, MN, USA
+subtitle: <a href='https://twin-cities.umn.edu'>University of Minnesota</a>. Minneapolis, MN, USA
 
 profile:
   align: right
@@ -19,8 +19,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a MS student in Computer Science at the Unversity of Minnesota (UMN). Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a first year MS student in <a href='http://https://cse.umn.edu/cs'>Computer Science</a> at the Unversity of Minnesota, Twin Cities (UMN). I am highly interested in exploring the intersection of deep learning and computer vision. I am actively looking for reasearch opportunities in these areas to enhance my skills, contribute to cutting-edge advancements, and make a meaningful impact.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Previously, I worked at <a href='http://cisco.com'>Cisco Systems</a> as Networking Consulting Engineer for 1.5 years, where I provided business critical network insights to <a href='https://www.boeing.com'>Boeing Co.</a> and <a href='https://www.expedia.com'>Expedia Group</a> to maximum performance and reliability in their infrastructure networks. During my time at Cisco, I contributed to a patent by introducing Customer Experience Network Comparison and Pain Point Tracking feature that utilizes conditional Generative Adversarial Networks (GAN). I also lead a cohort of interns on a project called Similar TAC Cases Recommendations which utilized NLP techniques and Cisco APIs to identify and categorize similar customer tickets.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I received B.Tech degree in Computer Science & Engineering from Gayatri Vidya Parishad College of Engineering, Visakhapatnam, India with a CGPA of 8.87/10.
