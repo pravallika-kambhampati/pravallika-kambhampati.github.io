@@ -6,17 +6,17 @@ subtitle: <a href='https://twin-cities.umn.edu'>University of Minnesota</a>. Min
 
 profile:
   align: right
-  image: prof_pic.jpeg
+  image: memoji.jpeg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Kenneth H. Keller Hall,</p>
     <p>200 Union St SE,</p>
     <p>Minneapolis, MN 55455</p>
 
-news: false  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
+news: false # includes a list of news items
+latest_posts: false # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
 I am a first year MS student in <a href='http://https://cse.umn.edu/cs'>Computer Science</a> at the University of Minnesota, Twin Cities (UMN). I am highly interested in exploring the intersection of deep learning and computer vision. I am actively looking for reasearch opportunities in these areas to enhance my skills, contribute to cutting-edge advancements, and make a meaningful impact.
