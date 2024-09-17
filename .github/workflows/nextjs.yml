@@ -25,13 +25,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "pnpm" # Enable pnpm caching for dependencies
-          cache-dependency-path: "pnpm-lock.yaml" # Ensure correct caching based on pnpm-lock.yaml
+          cache: "pnpm"
+          cache-dependency-path: "pnpm-lock.yaml"
+          corepack: true  # Enable Corepack
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7.x  # Match this with the version used to generate your lockfile
+      - name: Prepare pnpm
+        run: corepack prepare pnpm@7.30.0 --activate  # Adjust version as needed
+
+      - name: pnpm version
+        run: pnpm --version  # Optional: Verify pnpm installation
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -43,16 +45,15 @@ jobs:
         with:
           path: |
             .next/cache
-          # Use pnpm-lock.yaml to identify changes and cache accordingly
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile  # Using frozen lockfile for consistency
+        run: pnpm install --frozen-lockfile
 
       - name: Build with Next.js
-        run: pnpm run build  # Build the Next.js app using pnpm
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
