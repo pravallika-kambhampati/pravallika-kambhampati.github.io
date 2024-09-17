@@ -10,7 +10,7 @@ export const DATA = {
   description: "24. Student. University of Minnesota. Love CS. ",
   summary:
     "I am a second year MS student in Computer Science at the University of Minnesota, Twin Cities (UMN). I am currently working as a Graduate Research Assistant in the Hulleman Lab at the University of Minnesota, Medical School. My research focuses on analyzing retinal pigment epithelium (RPE) cell images from porcine and mice eyes. I am currently examining and quantifying deposits in these images, contributing to our understanding of retinal diseases, particularly age-related macular degeneration (AMD). I have also taken on the development and maintenance of the [lab’s site](https://hulleman-lab.umn.edu/).",
-  avatarUrl: "./memoji.jpeg",
+  avatarUrl: "./me2.jpg",
   skills: [
     "Python",
     "C",
