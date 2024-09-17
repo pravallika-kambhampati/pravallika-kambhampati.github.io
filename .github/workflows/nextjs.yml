@@ -22,12 +22,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
-          corepack: true  # Enable Corepack
+          # Removed 'corepack: true' because it's invalid in @v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.30.0  # Specify the pnpm version you need
 
       - name: pnpm version
         run: pnpm --version  # Verify pnpm installation
