@@ -10,7 +10,7 @@ export const DATA = {
   description: "24. Student. University of Minnesota. Love CS. ",
   summary:
     "I am a second year MS student in Computer Science at the University of Minnesota, Twin Cities (UMN). I am currently working as a Graduate Research Assistant in the Hulleman Lab at the University of Minnesota, Medical School. My research focuses on analyzing retinal pigment epithelium (RPE) cell images from porcine and mice eyes. I am currently examining and quantifying deposits in these images, contributing to our understanding of retinal diseases, particularly age-related macular degeneration (AMD). I have also taken on the development and maintenance of the [lab’s site](https://hulleman-lab.umn.edu/).",
-  avatarUrl: "/memoji.jpeg",
+  avatarUrl: "./memoji.jpeg",
   skills: [
     "Python",
     "C",
@@ -96,7 +96,7 @@ export const DATA = {
       badges: [],
       location: "Minneapolis",
       title: "Graduate Research Assistant",
-      logoUrl: "/uofmn.jpg",
+      logoUrl: "./uofmn.jpg",
       start: "June 2024",
       end: "Present",
       description:
@@ -108,7 +108,7 @@ export const DATA = {
       href: "http://cisco.com/",
       location: "Bengaluru, India",
       title: "Network Consulting Engineer",
-      logoUrl: "/cisco.jpg",
+      logoUrl: "./cisco.jpg",
       start: "Aug 2022",
       end: "Aug 2023",
       description:
@@ -120,7 +120,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Technical Undergrad Intern",
-      logoUrl: "/cisco.jpg",
+      logoUrl: "./cisco.jpg",
       start: "Feb 2022",
       end: "July 2022",
       description:
@@ -132,7 +132,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Full Stack Developer Intern",
-      logoUrl: "/upcalibre.png",
+      logoUrl: "./upcalibre.png",
       start: "January 2019",
       end: "April 2019",
       description:
@@ -144,7 +144,7 @@ export const DATA = {
       school: "University of Minnesota",
       href: "https://twin-cities.umn.edu/",
       degree: "Master of Science in Computer Science",
-      logoUrl: "/uofmn.jpg",
+      logoUrl: "./uofmn.jpg",
       start: "2023",
       end: "2025",
     },
@@ -152,7 +152,7 @@ export const DATA = {
       school: "Gayathri Vidya Parishad College of Engineering",
       href: "https://gvpce.ac.in/",
       degree: "Bachelor of Technology in Computer Science (BTech)",
-      logoUrl: "/gvpcea.png",
+      logoUrl: "./gvpcea.png",
       start: "2018",
       end: "2022",
     },
