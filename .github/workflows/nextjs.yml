@@ -21,18 +21,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Install pnpm first (this is key based on the feedback)
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.x  # You can adjust the pnpm version based on your requirement
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm" # Enable pnpm caching for dependencies
           cache-dependency-path: "pnpm-lock.yaml" # Ensure correct caching based on pnpm-lock.yaml
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.x  # Match this with the version used to generate your lockfile
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
