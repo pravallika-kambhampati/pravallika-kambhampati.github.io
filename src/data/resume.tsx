@@ -149,7 +149,7 @@ export const DATA = {
       end: "2025",
     },
     {
-      school: "Gayathri Vidya Parishad College of Engineering",
+      school: "Gayatri Vidya Parishad College of Engineering",
       href: "https://gvpce.ac.in/",
       degree: "Bachelor of Technology in Computer Science (BTech)",
       logoUrl: "./gvpcea.png",
