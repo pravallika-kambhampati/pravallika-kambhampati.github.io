@@ -27,13 +27,14 @@ jobs:
           node-version: "20"
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
-          corepack: true  # Enable Corepack
 
-      - name: Prepare pnpm
-        run: corepack prepare pnpm@7.30.0 --activate  # Adjust version as needed
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.30.0  # Specify the pnpm version you need
 
       - name: pnpm version
-        run: pnpm --version  # Optional: Verify pnpm installation
+        run: pnpm --version  # Verify pnpm installation
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
