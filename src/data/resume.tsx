@@ -7,7 +7,7 @@ export const DATA = {
   url: "https://pravallika-kambhampati.github.io/",
   location: "Minneapolis, MN",
   locationLink: "https://www.google.com/maps/place/minneapolis",
-  description: "24. Student. Love CS, Food, Books.",
+  description: "24. Student. Love CS, Books & Food.",
   summary:
     "I am a second year MS student in Computer Science at the University of Minnesota, Twin Cities (UMN). I am currently working as a Graduate Research Assistant in the Hulleman Lab at the University of Minnesota, Medical School. My research focuses on analyzing retinal pigment epithelium (RPE) cell images from porcine and mice eyes. I am currently examining and quantifying deposits in these images, contributing to our understanding of retinal diseases, particularly age-related macular degeneration (AMD). I have also taken on the development and maintenance of the [lab’s site](https://hulleman-lab.umn.edu/).",
   avatarUrl: "./me2.jpg",
