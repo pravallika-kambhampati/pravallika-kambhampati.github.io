@@ -164,10 +164,10 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. It's always fun to break
-                  free from routine and go all in on an idea—pushing boundaries,
-                  solving challenges, and building something exciting in just
-                  1-2 days
+                  {DATA.hackathons.length}+ hackathons. It is always fun to
+                  break free from routine and go all in on an idea—pushing
+                  boundaries, solving challenges, and building something
+                  exciting in just 1-2 days
                 </p>
               </div>
             </div>

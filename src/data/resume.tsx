@@ -305,7 +305,7 @@ export const DATA = {
     {
       title: "Elastic Search Hackathon 2019",
       description:
-        "Developed search UI application built using Elastic App Search. It integrates with Elastic Search UI, a library for building customizable search experiences on top of Elasticsearch's App Search service.",
+        "Developed search UI application built using Elastic App Search. It integrates with Elastic Search UI, a library for building customizable search experiences on top of Elasticsearch App Search service.",
       dates: "March 20th - 21st, 2019",
       location:
         "Gayatri Vidya Parishad College of Engineering, Visakhapatnam, India",
