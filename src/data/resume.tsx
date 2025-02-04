@@ -1,5 +1,7 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import { title } from "process";
+import { FaGithub, FaGlobe, FaYoutube } from "react-icons/fa";
 
 export const DATA = {
   name: "Pravallika Kambhampati",
@@ -257,5 +259,73 @@ export const DATA = {
       // video: "https://cdn.llm.report/openai-demo.mp4",
     },
   ],
-  hackathons: [],
+  books: [
+    {
+      title: "Book Title 1",
+      author: "Author 1",
+      coverImageUrl: "/path-to-cover1.jpg",
+      link: "/book-1",
+    },
+    {
+      title: "Book Title 2",
+      author: "Author 2",
+      coverImageUrl: "/path-to-cover2.jpg",
+      link: "/book-2",
+    },
+    {
+      title: "Past Book Title 1",
+      author: "Past Author 1",
+      coverImageUrl: "/path-to-cover1.jpg",
+      link: "/past-book-1",
+    },
+  ],
+
+  hackathons: [
+    {
+      title: "AI x Journalism: Hacks/Hackers",
+      description:
+        "Developed a Retrieval-Augmented Generation (RAG)-based search engine/chatbot for a local Minnesotan politician that combines a FAISS-powered knowledge base with Falcon3-1B-base LLM to generate responses to user queries, including citations to sources.",
+      dates: "January 31st - February 1st, 2025",
+      location:
+        "Hubbard School of Journalism and Mass Communication, Murphy Hall, UMN-TC",
+      image: "./hackathon.jpg",
+      links: [
+        {
+          icon: <FaGithub />,
+          title: "GitHub",
+          href: "https://github.com/hardikkgupta/fact-checker/",
+        },
+        {
+          icon: <FaYoutube />,
+          title: "Demo",
+          href: "https://www.youtube.com/watch?v=T2Sik5N8M1E",
+        },
+      ],
+    },
+    {
+      title: "Elastic Search Hackathon 2019",
+      description:
+        "Developed search UI application built using Elastic App Search. It integrates with Elastic Search UI, a library for building customizable search experiences on top of Elasticsearch's App Search service.",
+      dates: "March 20th - 21st, 2019",
+      location:
+        "Gayatri Vidya Parishad College of Engineering, Visakhapatnam, India",
+      image: "./hack-3.jpg",
+      links: [
+        {
+          icon: <FaGithub />,
+          title: "GitHub",
+          href: "https://github.com/Mukheem1603/hack-o-Holics",
+        },
+      ],
+    },
+    {
+      title: "Unity Hackathon 2018",
+      description:
+        "Developed an endless runner game using Unity and C# during a Unity-sponsored hackathon. Our team designed dynamic level generation, obstacle variations, and an engaging power-up system to enhance gameplay experience.",
+      dates: "August 15th - 16th, 2018",
+      location:
+        "Gayatri Vidya Parishad College of Engineering, Visakhapatnam, India",
+      image: "./hack-2.jpg",
+    },
+  ],
 } as const;

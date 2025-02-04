@@ -6,7 +6,6 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -152,7 +151,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/* <section id="hackathons">
+      <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -165,11 +164,10 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  {DATA.hackathons.length}+ hackathons. It's always fun to break
+                  free from routine and go all in on an idea—pushing boundaries,
+                  solving challenges, and building something exciting in just
+                  1-2 days
                 </p>
               </div>
             </div>
@@ -194,7 +192,46 @@ export default function Page() {
             </ul>
           </BlurFade>
         </div>
+      </section>
+      {/* <section id="books">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-xl font-bold tracking-tighter sm:text-3xl">
+                  On a fun note, books 📖
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  A collection of books that I've read in the past and the ones
+                  I am currently reading this year.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.books.map((book, id) => (
+              <BlurFade
+                key={book.title}
+                delay={BLUR_FADE_DELAY * 18 + id * 0.05}
+              >
+                <div className="flex flex-col items-center p-4 bg-white border rounded-lg">
+                  <img
+                    src={book.coverImageUrl}
+                    alt={book.title}
+                    className="w-32 h-48 object-cover mb-4 rounded-md"
+                  />
+                  {/* <Link href={book.link}>
+                    <a className="font-semibold text-xl">{book.title}</a>
+                  </Link> */}
+      {/* <p className="text-sm text-muted-foreground">{book.author}</p>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
       </section> */}
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
