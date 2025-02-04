@@ -326,6 +326,7 @@ export const DATA = {
       location:
         "Gayatri Vidya Parishad College of Engineering, Visakhapatnam, India",
       image: "./hack-2.jpg",
+      links: [],
     },
   ],
 } as const;
