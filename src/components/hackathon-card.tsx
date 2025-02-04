@@ -8,7 +8,7 @@ interface Props {
   dates: string;
   location: string;
   image?: string;
-  links?: readonly {
+  links?: {
     icon: React.ReactNode;
     title: string;
     href: string;
