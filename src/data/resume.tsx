@@ -261,22 +261,12 @@ export const DATA = {
   ],
   books: [
     {
-      title: "Book Title 1",
-      author: "Author 1",
-      coverImageUrl: "/path-to-cover1.jpg",
-      link: "/book-1",
+      coverImageUrl: "./curious.jpg",
+      year: 2025,
     },
     {
-      title: "Book Title 2",
-      author: "Author 2",
-      coverImageUrl: "/path-to-cover2.jpg",
-      link: "/book-2",
-    },
-    {
-      title: "Past Book Title 1",
-      author: "Past Author 1",
-      coverImageUrl: "/path-to-cover1.jpg",
-      link: "/past-book-1",
+      coverImageUrl: "./cisco.jpg",
+      year: 2024,
     },
   ],
 

@@ -1,3 +1,4 @@
+"use client";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -7,10 +8,38 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
+import { useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
+interface Book {
+  year: number;
+  coverImageUrl: string;
+}
+
+interface BooksByYear {
+  [year: number]: Book[];
+}
+
 export default function Page() {
+  const [openYear, setOpenYear] = useState<number | null>(
+    new Date().getFullYear()
+  );
+
+  const handleToggleYear = (year: number): void => {
+    setOpenYear(openYear === year ? null : year); // Toggle the selected year open/close
+  };
+
+  const booksByYear: BooksByYear = DATA.books.reduce<BooksByYear>(
+    (acc, book) => {
+      const year = book.year; // Assuming each book has a date property
+      if (!acc[year]) acc[year] = [];
+      acc[year].push(book);
+      return acc;
+    },
+    {}
+  );
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -193,12 +222,12 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      {/* <section id="books">
+      <section id="books">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-xl font-bold tracking-tighter sm:text-3xl">
+                <h2 className="text-xl font-bold tracking-tighter sm:text-5xl">
                   On a fun note, books 📖
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -209,28 +238,45 @@ export default function Page() {
             </div>
           </BlurFade>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          {/* <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.books.map((book, id) => (
-              <BlurFade
-                key={book.title}
-                delay={BLUR_FADE_DELAY * 18 + id * 0.05}
-              >
-                <div className="flex flex-col items-center p-4 bg-white border rounded-lg">
-                  <img
-                    src={book.coverImageUrl}
-                    alt={book.title}
-                    className="w-32 h-48 object-cover mb-4 rounded-md"
-                  />
-                  {/* <Link href={book.link}>
-                    <a className="font-semibold text-xl">{book.title}</a>
-                  </Link> */}
-      {/* <p className="text-sm text-muted-foreground">{book.author}</p>
-                </div>
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 18 + id * 0.05}>
+                <img
+                  src={book.coverImageUrl}
+                  className="w-32 h-48 object-cover mb-4 rounded-md"
+                />
               </BlurFade>
+            ))}
+          </div> */}
+          <div className="space-y-4 max-w-[800px] mx-auto">
+            {Object.keys(booksByYear).map((year) => (
+              <div key={year}>
+                <div
+                  className="cursor-pointer text-lg font-semibold"
+                  onClick={() => handleToggleYear(year)}
+                >
+                  {year}
+                </div>
+                {openYear === year && (
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-4">
+                    {booksByYear[year].map((book, id) => (
+                      <BlurFade
+                        key={id}
+                        delay={BLUR_FADE_DELAY * 7 + id * 0.05}
+                      >
+                        <img
+                          src={book.coverImageUrl}
+                          className="w-32 h-48 object-cover mb-4 rounded-md"
+                        />
+                      </BlurFade>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
