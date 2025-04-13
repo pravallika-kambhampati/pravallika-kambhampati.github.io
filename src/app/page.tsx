@@ -250,6 +250,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <Analytics />
     </main>
   );
 }
